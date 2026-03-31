@@ -1,0 +1,1 @@
+const t="2025-04-01",e="社会医療法人共愛会",T="kyoritsu",s={THEME_PREFIX:"theme:",SINAGE_SETTINGS_PREFIX:"sinage:settings:"};function _(E){return`${s.THEME_PREFIX}${E}`}export{T as D,t as M,e as O,s as S,_ as g};
