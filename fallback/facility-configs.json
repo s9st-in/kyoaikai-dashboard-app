@@ -1,0 +1,37 @@
+{
+  "facilities": [
+    {
+      "slug": "kyoritsu",
+      "name": "戸畑共立病院",
+      "shortName": "共立",
+      "beds": {
+        "total": 218,
+        "general": 202,
+        "icu": 16
+      }
+    },
+    {
+      "slug": "reha",
+      "name": "戸畑リハビリテーション病院",
+      "shortName": "リハ",
+      "beds": {
+        "total": 173,
+        "general": 74,
+        "icu": 0,
+        "communityCare": 82
+      },
+      "wards": [
+        { "slug": "recovery-2s", "name": "回復期2S", "shortName": "回復2S", "beds": 42 },
+        { "slug": "recovery-2n", "name": "回復期2N", "shortName": "回復2N", "beds": 32 },
+        { "slug": "community-care-3f", "name": "地域包括ケア3F", "shortName": "包括3F", "beds": 42 },
+        { "slug": "community-care-4f", "name": "地域包括ケア4F", "shortName": "包括4F", "beds": 40 },
+        { "slug": "palliative-5f", "name": "緩和ケア5F", "shortName": "緩和5F", "beds": 17 }
+      ]
+    }
+  ],
+  "board_facilities": [
+    { "board_slug": "kyoritsu", "facility_slug": "kyoritsu" },
+    { "board_slug": "reha", "facility_slug": "reha" },
+    { "board_slug": "bed-control", "facility_slug": "kyoritsu" }
+  ]
+}

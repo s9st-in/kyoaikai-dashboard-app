@@ -1,0 +1,84 @@
+{
+  "boards": [
+    {
+      "slug": "kyoritsu",
+      "dashboardTitle": "重要指標ダッシュボード",
+      "dashboardShortTitle": "重要指標",
+      "sectionMessage": "戸畑共立病院の指標・グラフを表示しています",
+      "layout": {
+        "widgets": [
+          {
+            "type": "info-suiyokai",
+            "order": -2,
+            "colSpan": 2,
+            "config": { "type": "info-suiyokai" }
+          },
+          {
+            "type": "info-announcement",
+            "order": -1,
+            "colSpan": 2,
+            "config": { "type": "info-announcement" }
+          }
+        ]
+      }
+    },
+    {
+      "slug": "reha",
+      "dashboardTitle": "重要指標ダッシュボード",
+      "dashboardShortTitle": "重要指標",
+      "sectionMessage": "戸畑リハビリテーション病院の指標・グラフを表示しています",
+      "layout": {
+        "widgets": [
+          {
+            "type": "ward-census",
+            "order": 209.3,
+            "colSpan": 1,
+            "config": {
+              "type": "ward-census",
+              "totalTitle": "在院数合計",
+              "wardDefs": [
+                { "title": "回復期", "dataKey": "dev_recovery_ward", "wardSlugs": ["recovery-2s", "recovery-2n"], "code": "回復", "iconColor": "primary" },
+                { "title": "地ケア", "dataKey": "dev_community_care", "wardSlugs": ["community-care-3f", "community-care-4f"], "code": "地ケア", "iconColor": "accent" },
+                { "title": "緩和ケア", "dataKey": "dev_palliative_ward", "wardSlug": "palliative-5f", "code": "緩和", "iconColor": "tertiary" }
+              ]
+            }
+          },
+          {
+            "type": "performance-index",
+            "order": 209.5,
+            "colSpan": 1,
+            "config": {
+              "type": "performance-index",
+              "dataKey": "reha_performance_index",
+              "target": 40,
+              "maxValue": 60,
+              "excludeDataKeys": ["reha_performance_index"]
+            }
+          },
+          {
+            "type": "ward-census-vertical",
+            "order": 210.5,
+            "colSpan": 1,
+            "config": {
+              "type": "ward-census-vertical",
+              "totalTitle": "在院数合計（フロア別）",
+              "wardDefs": [
+                { "title": "2階南 回復期", "dataKey": "dev_recovery_ward_2s", "wardSlug": "recovery-2s" },
+                { "title": "2階北 回復期", "dataKey": "dev_recovery_ward_2n", "wardSlug": "recovery-2n" },
+                { "title": "3階 地ケア", "dataKey": "dev_community_care_3f", "wardSlug": "community-care-3f" },
+                { "title": "4階 地ケア", "dataKey": "dev_community_care_4f", "wardSlug": "community-care-4f" },
+                { "title": "5階 緩和ケア", "dataKey": "dev_palliative_ward_5f", "wardSlug": "palliative-5f" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bed-control",
+      "dashboardTitle": "ベッドコントロールダッシュボード",
+      "dashboardShortTitle": "ベッドCtrl",
+      "sectionMessage": "戸畑共立病院のベッドコントロール指標を表示しています"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "key": "dashboard",
+    "strategy": "external",
+    "is_devonly": false,
+    "endpoints": [
+      { "url": "https://script.google.com/macros/s/AKfycbwor8y2k5p2zXUcIj7rBnyn3Z_V4cTyEgcyGzGnvy_VgAjam2ymmMFJNy0xUvnTuzjt/exec" }
+    ],
+    "fields": [
+      { "key": "日付", "type": "string" },
+      { "key": "病床利用率 (%)", "type": "percent", "transform": "multiply100" },
+      { "key": "救急車搬入数", "type": "number" },
+      { "key": "入院患者数", "type": "number" },
+      { "key": "退院予定数", "type": "number" },
+      { "key": "一般病棟在院数", "type": "number" },
+      { "key": "集中治療室在院数", "type": "number" },
+      { "key": "平均在院日数", "type": "number" },
+      { "key": "手術件数", "type": "number" },
+      { "key": "長期入院者数（30日）", "type": "number" }
+    ],
+    "is_polling": true
+  },
+  {
+    "key": "suiyokai",
+    "strategy": "external",
+    "is_devonly": false,
+    "endpoints": [
+      { "url": "https://script.google.com/macros/s/AKfycbz2vWPO7bmwFd_3LrdcRrgTk-JoLHPp_BflUQo96GN79R__M7yUp209g5FLWTnRya3B/exec" }
+    ],
+    "fields": [
+      { "key": "title", "type": "string", "label": "カードタイトル" }
+    ],
+    "is_polling": true
+  },
+  {
+    "key": "announcement",
+    "strategy": "external",
+    "is_devonly": false,
+    "endpoints": [
+      { "url": "https://script.google.com/macros/s/AKfycbz87qFFmnxVd7rJWO9WXsiX776Ci5IK4MhUWN9z-wc6JEbJLuMRa50-3nV1oznIGS4R/exec" }
+    ],
+    "fields": [
+      { "key": "title", "type": "string", "label": "タイトル" },
+      { "key": "subtitle", "type": "string", "label": "サブタイトル" },
+      { "key": "tag", "type": "string", "label": "タグ" },
+      { "key": "timestamp", "type": "string", "label": "タイムスタンプ" }
+    ],
+    "is_polling": true
+  },
+  {
+    "key": "dev-reha-dashboard",
+    "strategy": "dummy",
+    "is_devonly": true,
+    "endpoints": [],
+    "fields": [
+      { "key": "日付", "type": "string" },
+      { "key": "reha_bed_usage", "type": "percent", "transform": "multiply100" },
+      { "key": "reha_home_admission_rate", "type": "percent", "transform": "multiply100" },
+      { "key": "reha_home_return_rate", "type": "percent", "transform": "multiply100" },
+      { "key": "reha_performance_index", "type": "number" },
+      { "key": "dev_inpatients", "type": "number" },
+      { "key": "dev_scheduled_discharge", "type": "number" },
+      { "key": "dev_recovery_ward", "type": "number" },
+      { "key": "dev_palliative_ward", "type": "number" },
+      { "key": "dev_community_care", "type": "number" },
+      { "key": "dev_avg_stay_days", "type": "number" }
+    ],
+    "is_polling": false
+  },
+  {
+    "key": "dev-bed-control-dashboard",
+    "strategy": "dummy",
+    "is_devonly": true,
+    "endpoints": [],
+    "fields": [
+      { "key": "日付", "type": "string" },
+      { "key": "bc_inpatients", "type": "number" },
+      { "key": "bc_vacant_beds", "type": "number" },
+      { "key": "bc_vacant_rate", "type": "percent", "transform": "multiply100" },
+      { "key": "bc_discharge_today", "type": "number" },
+      { "key": "bc_admission_today", "type": "number" },
+      { "key": "bc_discharge_tomorrow", "type": "number" },
+      { "key": "bc_admission_tomorrow", "type": "number" },
+      { "key": "bc_emergency_admissions", "type": "number" },
+      { "key": "bc_utilization_rate", "type": "percent", "transform": "multiply100" },
+      { "key": "bc_avg_stay_days", "type": "number" },
+      { "key": "bc_monthly_admissions", "type": "number" },
+      { "key": "bc_monthly_discharges", "type": "number" },
+      { "key": "bc_long_stay_30", "type": "number" },
+      { "key": "bc_long_stay_60", "type": "number" }
+    ],
+    "is_polling": false
+  }
+]
