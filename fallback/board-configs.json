@@ -32,7 +32,7 @@
           {
             "type": "ward-census",
             "order": 209.3,
-            "colSpan": 1,
+            "colSpan": 2,
             "config": {
               "type": "ward-census",
               "totalTitle": "在院数合計",
