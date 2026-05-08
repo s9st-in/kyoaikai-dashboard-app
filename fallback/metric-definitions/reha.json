@@ -1,0 +1,697 @@
+[
+	{
+		"id": "md-reha-admitted",
+		"slug": "reha-admitted",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "入院患者",
+			"label": "入院患者",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 202
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAdmittedChart",
+					"colorName": "green",
+					"decimalPlaces": 0,
+					"maxY": 30,
+					"order": 202,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days",
+		"slug": "reha-avg-stay-days",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数",
+			"label": "平均在院日数",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-total",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 213,
+				"cardStyle": "filled"
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDaysChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 100,
+					"order": 213,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-2n",
+		"slug": "reha-avg-stay-days-2n",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（2階北）",
+			"label": "2階北",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-floor",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 217
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDays2nChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 217,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-2s",
+		"slug": "reha-avg-stay-days-2s",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（2階南）",
+			"label": "2階南",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-floor",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 218
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDays2sChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 218,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-3f",
+		"slug": "reha-avg-stay-days-3f",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（3階）",
+			"label": "3階",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-floor",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 219
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDays3fChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 219,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-4f",
+		"slug": "reha-avg-stay-days-4f",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（4階）",
+			"label": "4階",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-floor",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 220
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDays4fChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 220,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-5f",
+		"slug": "reha-avg-stay-days-5f",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（5階）",
+			"label": "5階",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-floor",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 221
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDays5fChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 221,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-community-care",
+		"slug": "reha-avg-stay-days-community-care",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（地域包括ケア在院数）",
+			"label": "地域包括ケア",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-function",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 215
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDaysCommunityCareChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 215,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-palliative",
+		"slug": "reha-avg-stay-days-palliative",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（緩和ケア在院数）",
+			"label": "緩和ケア",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-function",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 216
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDaysPalliativeChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 216,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-avg-stay-days-recovery",
+		"slug": "reha-avg-stay-days-recovery",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数（回復期）",
+			"label": "回復期",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"category": "los-by-function",
+			"display": {
+				"formatterType": "decimal1",
+				"unitPrefix": false,
+				"order": 214
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaAvgStayDaysRecoveryChart",
+					"colorName": "purple",
+					"decimalPlaces": 1,
+					"maxY": 120,
+					"order": 214,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-bed-usage",
+		"slug": "reha-bed-usage",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "病床利用率",
+			"label": "病床利用率",
+			"unit": "%",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "percent",
+				"unitPrefix": false,
+				"order": 201,
+				"cardStyle": "filled"
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaBedUsageChart",
+					"title": "病床利用率 (%)",
+					"colorName": "blue",
+					"decimalPlaces": 1,
+					"transformMultiplier": 100,
+					"maxY": 100,
+					"order": 201,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-community-care",
+		"slug": "reha-community-care",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "地域包括ケア在院数",
+			"label": "地域包括ケア",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-function",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 206
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaCommunityCareChart",
+					"colorName": "teal",
+					"decimalPlaces": 0,
+					"maxY": 50,
+					"order": 206,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-community-care-3f",
+		"slug": "reha-community-care-3f",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "3階在院数",
+			"label": "3階",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-floor",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 210
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaCommunityCare3fChart",
+					"colorName": "teal",
+					"decimalPlaces": 0,
+					"maxY": 50,
+					"order": 210,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-community-care-4f",
+		"slug": "reha-community-care-4f",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "4階在院数",
+			"label": "4階",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-floor",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 211
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaCommunityCare4fChart",
+					"colorName": "teal",
+					"decimalPlaces": 0,
+					"maxY": 50,
+					"order": 211,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-inpatients",
+		"slug": "reha-inpatients",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "在院数",
+			"label": "在院数",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-total",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 204,
+				"cardStyle": "filled"
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaInpatientsChart",
+					"colorName": "blue",
+					"decimalPlaces": 0,
+					"maxY": 200,
+					"order": 204,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-palliative-ward",
+		"slug": "reha-palliative-ward",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "緩和ケア在院数",
+			"label": "緩和ケア",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-function",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 207
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaPalliativeWardChart",
+					"colorName": "red",
+					"decimalPlaces": 0,
+					"maxY": 30,
+					"order": 207,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-palliative-ward-5f",
+		"slug": "reha-palliative-ward-5f",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "5階在院数",
+			"label": "5階",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-floor",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 212
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaPalliativeWard5fChart",
+					"colorName": "red",
+					"decimalPlaces": 0,
+					"maxY": 20,
+					"order": 212,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-recovery-ward",
+		"slug": "reha-recovery-ward",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "回復期在院数",
+			"label": "回復期",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-function",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 205
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaRecoveryWardChart",
+					"colorName": "green",
+					"decimalPlaces": 0,
+					"maxY": 150,
+					"order": 205,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-recovery-ward-2n",
+		"slug": "reha-recovery-ward-2n",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "2階北在院数",
+			"label": "2階北",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-floor",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 208
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaRecoveryWard2nChart",
+					"colorName": "green",
+					"decimalPlaces": 0,
+					"maxY": 40,
+					"order": 208,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-recovery-ward-2s",
+		"slug": "reha-recovery-ward-2s",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "2階南在院数",
+			"label": "2階南",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"category": "census-by-floor",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 209
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaRecoveryWard2sChart",
+					"colorName": "green",
+					"decimalPlaces": 0,
+					"maxY": 50,
+					"order": 209,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-reha-scheduled-discharge",
+		"slug": "reha-scheduled-discharge",
+		"facilitySlug": "reha",
+		"isActive": true,
+		"config": {
+			"dataKey": "退院予定",
+			"label": "退院予定",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 203
+			},
+			"visibility": {
+				"isDev": false,
+				"environments": ["development", "staging", "production"]
+			},
+			"graphs": [
+				{
+					"graphId": "rehaScheduledDischargeChart",
+					"colorName": "orange",
+					"decimalPlaces": 0,
+					"maxY": 20,
+					"order": 203,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	}
+]

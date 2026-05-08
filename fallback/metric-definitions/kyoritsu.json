@@ -1,0 +1,308 @@
+[
+	{
+		"id": "md-kyoritsu-ambulance",
+		"slug": "ambulance",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "救急車搬入数",
+			"label": "救急車搬入",
+			"unit": "台",
+			"timeGranularity": "daily",
+			"businessQuestion": "昨日の救急対応は適切でしたか？",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 2
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "ambulanceChart",
+					"colorName": "red",
+					"decimalPlaces": 0,
+					"order": 2,
+					"chartType": "line"
+				}
+			],
+			"thresholds": [
+				{
+					"organizationUnitSlug": "kyoritsu",
+					"direction": "lower",
+					"targetValue": 5,
+					"warningThreshold": 3,
+					"criticalThreshold": 1
+				}
+			]
+		}
+	},
+	{
+		"id": "md-kyoritsu-average-stay",
+		"slug": "average-stay",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "平均在院日数",
+			"label": "平均在院日数",
+			"unit": "日",
+			"timeGranularity": "daily",
+			"businessQuestion": "在院日数は適正範囲ですか？",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 7
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "averageStayChart",
+					"colorName": "darkblue",
+					"decimalPlaces": 1,
+					"order": 7,
+					"chartType": "line"
+				}
+			],
+			"thresholds": [
+				{
+					"organizationUnitSlug": "kyoritsu",
+					"direction": "upper",
+					"targetValue": 12,
+					"warningThreshold": 15,
+					"criticalThreshold": 18
+				}
+			]
+		}
+	},
+	{
+		"id": "md-kyoritsu-bed-utilization",
+		"slug": "bed-utilization",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "病床利用率 (%)",
+			"label": "病床利用率",
+			"unit": "%",
+			"timeGranularity": "daily",
+			"businessQuestion": "空床は足りていますか？救急受入余力はありますか？",
+			"display": {
+				"formatterType": "percent",
+				"unitPrefix": false,
+				"order": 1,
+				"cardStyle": "filled"
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "bedUtilizationChart",
+					"title": "病床利用率 (%)",
+					"colorName": "blue",
+					"decimalPlaces": 1,
+					"transformMultiplier": 100,
+					"maxY": 110,
+					"order": 1,
+					"chartType": "line"
+				}
+			],
+			"thresholds": [
+				{
+					"organizationUnitSlug": "kyoritsu",
+					"direction": "upper",
+					"targetValue": 90,
+					"warningThreshold": 95,
+					"criticalThreshold": 98
+				}
+			]
+		}
+	},
+	{
+		"id": "md-kyoritsu-discharges",
+		"slug": "discharges",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "退院予定数",
+			"label": "退院予定",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 4
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "dischargesChart",
+					"colorName": "orange",
+					"decimalPlaces": 0,
+					"order": 4,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-kyoritsu-general-ward",
+		"slug": "general-ward",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "一般病棟在院数",
+			"label": "一般病棟在院数",
+			"unit": "床",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 5,
+				"denominatorValue": 202
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "generalWardChart",
+					"colorName": "purple",
+					"decimalPlaces": 0,
+					"order": 5,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-kyoritsu-icu",
+		"slug": "icu",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "集中治療室在院数",
+			"label": "集中治療室在院数",
+			"unit": "床",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 6,
+				"denominatorValue": 16
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "icuChart",
+					"colorName": "teal",
+					"decimalPlaces": 0,
+					"order": 6,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-kyoritsu-inpatients",
+		"slug": "inpatients",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "入院患者数",
+			"label": "新規入院",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"businessQuestion": "新規入院の受入状況は適切ですか？",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 3
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "inpatientsChart",
+					"colorName": "green",
+					"decimalPlaces": 0,
+					"order": 3,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-kyoritsu-long-stay-patients",
+		"slug": "long-stay-patients",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "長期入院者数（30日）",
+			"label": "長期入院者数（30日）",
+			"unit": "人",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 9
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "longStayPatientsChart",
+					"colorName": "amber",
+					"decimalPlaces": 0,
+					"maxY": 20,
+					"order": 9,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	},
+	{
+		"id": "md-kyoritsu-surgeries",
+		"slug": "surgeries",
+		"facilitySlug": "kyoritsu",
+		"isActive": true,
+		"config": {
+			"dataKey": "手術件数",
+			"label": "手術件数",
+			"unit": "件",
+			"timeGranularity": "daily",
+			"display": {
+				"formatterType": "value",
+				"unitPrefix": false,
+				"order": 8
+			},
+			"visibility": {
+				"isDev": false
+			},
+			"graphs": [
+				{
+					"graphId": "surgeriesChart",
+					"colorName": "pink",
+					"decimalPlaces": 0,
+					"maxY": 50,
+					"order": 8,
+					"chartType": "line"
+				}
+			],
+			"thresholds": []
+		}
+	}
+]

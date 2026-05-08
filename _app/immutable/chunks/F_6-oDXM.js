@@ -1,0 +1,1 @@
+function u(e){const n=e.length;if(n<2)return null;let r=0,o=0,s=0,l=0,f=0;for(const t of e)r+=t.x,o+=t.y,s+=t.x*t.y,l+=t.x*t.x,f+=t.y*t.y;const c=n*s-r*o,x=Math.sqrt((n*l-r**2)*(n*f-o**2));return x===0?0:c/x}function y(e){if(e.length===0)return 0;let n=0;for(const r of e)n+=r;return n/e.length}export{y as m,u as p};
