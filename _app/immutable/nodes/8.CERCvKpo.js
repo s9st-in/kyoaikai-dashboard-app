@@ -1,0 +1,1 @@
+import{r as o}from"../chunks/DfgfjzFV.js";import{r as e}from"../chunks/Dq8xxZJ_.js";import"../chunks/DsnmJJEf.js";import"../chunks/69_IOA4Y.js";const r=async()=>{o(307,e("/board/home"))},i=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));function m(t){}export{m as component,i as universal};
